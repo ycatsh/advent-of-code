@@ -1,16 +1,9 @@
+import string
+
 with open('input.txt') as file:
-    inputs = []
-    for i in file.read().strip().split('\n'):
-        inputs.append(i)
+    inputs = [i for i in file.read().strip().split('\n')]
 
-chars = [
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-    'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-]
-
+chars = [i for i in string.ascii_letters]
 
 def part1(charsList):
     sumItems = 0

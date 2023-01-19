@@ -1,12 +1,9 @@
 import numpy as np
 
 with open('input.txt') as file:
-    inputs = []
-    for i in file.read().strip().split('\n'):
-        inputs.append(i)
+    inputs = [i for i in file.read().strip().split('\n')]
 
 data = [list(j) for j in inputs]
-
 matrix = np.array(data)
 
 numRows = len(matrix)

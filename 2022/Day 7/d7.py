@@ -1,7 +1,5 @@
 with open('input.txt') as file:
-    inputs = []
-    for i in file.read().strip().split('\n'):
-        inputs.append(i)
+    inputs = [i for i in file.read().strip().split('\n')]
 
 # 123 abc means that the current directory contains a file named abc with size 123
 # dir xyz means that the current directory contains a directory named xyz

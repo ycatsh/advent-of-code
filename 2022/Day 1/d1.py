@@ -1,7 +1,5 @@
 with open('input.txt') as file:
-    inputs = []
-    for i in file.read().strip().split('\n\n'):
-        inputs.append(i)
+    inputs = [i for i in file.read().strip().split('\n\n')]
 
 sumList = []
 
