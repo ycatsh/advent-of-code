@@ -1,4 +1,4 @@
-with open('input.txt') as file:
+with open('../Data/d10.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
 # Find the signal strength during the 20th, 60th, 100th, 140th, 180th, and 220th cycles.

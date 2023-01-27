@@ -1,6 +1,6 @@
 import string
 
-with open('input.txt') as file:
+with open('../Data/d3.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
 chars = [i for i in string.ascii_letters]

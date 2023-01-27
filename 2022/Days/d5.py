@@ -1,4 +1,4 @@
-with open('input.txt') as file:
+with open('../Data/d5.txt') as file:
     inputs = [i.splitlines() for i in file.read().strip().split('\n\n')]
 
 # as you can tell, I was stuck.

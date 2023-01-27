@@ -1,4 +1,4 @@
-with open('input.txt') as file:
+with open('../Data/d6.txt') as file:
     inputs = file.read()
 
 # part 1

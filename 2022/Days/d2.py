@@ -1,4 +1,4 @@
-with open('input.txt') as file:
+with open('../Data/d2.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
 # (1 for Rock, 2 for Paper, and 3 for Scissors) plus the score for the
