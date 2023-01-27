@@ -1,8 +1,5 @@
-with open('input.txt') as file:
-    inputs = []
-    for i in file.read():
-        inputs.append(i)
-
+with open('../Data/d1.txt') as file:
+    inputs = [i for i in file.read()]
 
 def part1(data):
     floor = 0
@@ -12,7 +9,6 @@ def part1(data):
             floor += 1
         if j == ')':
             floor -= 1
-
     print(floor)
 
 
@@ -28,7 +24,6 @@ def part2(data):
         if j == ')':
             floor -= 1
         pointer += 1
-
     print(pointer)
 
 part1(inputs) # part 1

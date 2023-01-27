@@ -1,7 +1,5 @@
-with open ('input.txt') as file:
-    inputs = []
-    for i in file.read().strip().split('\n'):
-        inputs.append(i)
+with open ('../Data/d5.txt') as file:
+    inputs = [i for i in file.read().strip().split('\n')]
 
 vowels = ['a', 'e', 'i', 'o', 'u']
 exceptions = ['ab', 'cd', 'pq', 'xy']

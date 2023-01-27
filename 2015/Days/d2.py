@@ -1,7 +1,6 @@
-with open('input.txt') as file:
-    inputs = []
-    for i in file.read().strip().split('\n'):
-        inputs.append(i)
+with open('../Data/d2.txt') as file:
+    inputs = [i for i in file.read().strip().split('\n')]
+
 
 def part1(data):
     total_area = 0 
@@ -14,8 +13,8 @@ def part1(data):
         slag = min(arr)
 
         total_area += area+slag
-
     print(total_area)
+
 
 def part2(data):
     total_feet = 0
@@ -30,7 +29,6 @@ def part2(data):
         bow = min(arr)
 
         total_feet += vol+bow
-
     print(total_feet)
 
 part1(inputs) # part 1

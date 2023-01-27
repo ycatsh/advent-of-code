@@ -1,9 +1,8 @@
-with open ('input.txt') as file:
-    inputs = []
-    for i in file.read():
-        inputs.append(i)
+with open ('../Data/d3.txt') as file:
+    inputs = [i for i in file.read()]
 
 move_dir = {'>':[1,0], '<':[-1,0], '^':[0,1], 'v':[0,-1]}
+
 
 def part1(data, moves):
     house = [(0,0)]
@@ -13,6 +12,7 @@ def part1(data, moves):
         house.append((tmp_house[0]+moves[i][0], tmp_house[1]+moves[i][1]))
 
     print(len(set(house)))
+
 
 def part2(data, moves):
     house = [(0,0)]

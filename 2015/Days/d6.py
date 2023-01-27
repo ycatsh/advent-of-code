@@ -1,9 +1,7 @@
 import numpy
 
-with open ('input.txt') as file:
-    inputs = []
-    for i in file.read().strip().split('\n'):
-        inputs.append(i)
+with open ('../Data/d6.txt') as file:
+    inputs = [i for i in file.read().strip().split('\n')]
 
 display = numpy.zeros((1000,1000), dtype=numpy.int_)
 #0: off, 1: on
@@ -38,6 +36,7 @@ def part1(data, screen):
 
     print(sum(sum(lit) for lit in screen))
 
+
 def part2(data, screen):
     for line in range(len(data)):
         cmd = inputs[line].split(' ')
@@ -68,6 +67,7 @@ def part2(data, screen):
                     screen[i][j] += 1
 
     print(sum(sum(bright) for bright in screen))
+
 
 #--- call part 2 after running part 1 ---#
 
