@@ -1,4 +1,4 @@
-with open ('../Data/d5.txt') as file:
+with open ('../data/05.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
 vowels = ['a', 'e', 'i', 'o', 'u']

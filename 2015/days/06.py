@@ -1,6 +1,6 @@
 import numpy
 
-with open ('../Data/d6.txt') as file:
+with open ('../data/06.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
 display = numpy.zeros((1000,1000), dtype=numpy.int_)
