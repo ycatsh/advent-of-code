@@ -4,7 +4,7 @@ secret_key = 'ckczppom'
 
 def part1(i):
     while i >= 0:
-        hexed = hashlib.md5('{}{}'.format(secret_key, i).encode('utf-8')).hexdigest()
+        hexed = hashlib.md5(f'{secret_key}{i}'.encode('utf-8')).hexdigest()
         if str(hexed)[0:5] == '00000':
             print(i)
             break
@@ -13,7 +13,7 @@ def part1(i):
 
 def part2(j):
     while j >= 0:
-        hexed = hashlib.md5('{}{}'.format(secret_key, j).encode('utf-8')).hexdigest()
+        hexed = hashlib.md5(f'{secret_key}{j}'.encode('utf-8')).hexdigest()
         if str(hexed)[0:6] == '000000':
             print(j)
             break

@@ -1,4 +1,4 @@
-with open('../Data/d1.txt') as file:
+with open('../data/01.txt') as file:
     inputs = [i for i in file.read()]
 
 def part1(data):

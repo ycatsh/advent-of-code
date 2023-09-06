@@ -6,7 +6,6 @@ def result(part, num):
         c = 1
         sep = []
         prev = num[0]
-
         for digit in num[1:]:
             if prev == digit:
                 c+= 1

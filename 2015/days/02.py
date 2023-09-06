@@ -1,4 +1,4 @@
-with open('../Data/d2.txt') as file:
+with open('../data/02.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
 
