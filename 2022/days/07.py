@@ -1,4 +1,4 @@
-with open('../Data/d7.txt') as file:
+with open('../data/07.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
 # 123 abc means that the current directory contains a file named abc with size 123

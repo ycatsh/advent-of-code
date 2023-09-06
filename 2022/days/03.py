@@ -1,6 +1,6 @@
 import string
 
-with open('../Data/d3.txt') as file:
+with open('../data/03.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
 chars = [i for i in string.ascii_letters]
@@ -18,7 +18,7 @@ def part1(charsList):
             if k in firstComp and k in secondComp:
                 sumItems += (charsList.index(k)+1)
 
-    print(f'part 1: {sumItems}')
+    print(sumItems)
 
 
 def part2(charList):
@@ -34,7 +34,7 @@ def part2(charList):
             if k in comp[0] and k in comp[1] and k in comp[2]:
                 sumItems += (charList.index(k)+1)
 
-    print(f'part 2: {sumItems}')
+    print(sumItems)
 
 
 part1(chars)
