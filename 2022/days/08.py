@@ -1,6 +1,6 @@
 import numpy as np
 
-with open('../Data/d8.txt') as file:
+with open('../data/08.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
 data = [list(j) for j in inputs]

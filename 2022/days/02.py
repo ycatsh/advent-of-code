@@ -1,24 +1,17 @@
-with open('../Data/d2.txt') as file:
+with open('../data/02.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
-# (1 for Rock, 2 for Paper, and 3 for Scissors) plus the score for the
-# outcome of the round (0 if you lost, 3 if the round was a draw, and 6 if you won).
 
 def part1(data):
     score = 0
 
     for j in data:
         if j[2] == 'X':
-            score += 1
-            # rock
-
+            score += 1  # rock
         if j[2] == 'Y':
-            score += 2
-            # paper
-
+            score += 2  # paper
         if j[2] == 'Z':
-            score += 3
-            # scissors
+            score += 3  # scissors
 
         if j == "A X":
             score += 3  # draw
@@ -41,7 +34,7 @@ def part1(data):
         if j == "C Z":
             score += 3  # draw
 
-    print(f'part 1: {score}')  # part 1
+    print(score)
 
 
 def part2(data):
@@ -69,7 +62,7 @@ def part2(data):
         if j == "C Z":
             score += (6+1)  # win, rock
 
-    print(f'part 2: {score}')  # part 2
+    print(score)
 
 
 part1(inputs)

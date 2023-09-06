@@ -1,4 +1,4 @@
-with open('../Data/d5.txt') as file:
+with open('../data/05.txt') as file:
     inputs = [i.splitlines() for i in file.read().strip().split('\n\n')]
 
 # as you can tell, I was stuck.
@@ -25,7 +25,7 @@ def part1(data):
     for k in stacks:
         stackEnds += stacks[k][-1]
 
-    print(f'part 1: {stackEnds}')  # part 1
+    print(stackEnds)
 
 
 def part2(data):
@@ -42,9 +42,9 @@ def part2(data):
     for k in stacks:
         stackEnds += stacks[k][-1]
 
-    print(f'part 2: {stackEnds}')  # part 2
+    print(stackEnds)
 
-#--- run part 2 after commenting part1 ---#
+#--- run part 2 after running part 1 ---#
 
 #part1(inputs) # part 1
 part2(inputs) # part 2
