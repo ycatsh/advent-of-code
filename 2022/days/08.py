@@ -6,14 +6,14 @@ with open('../data/08.txt') as file:
 data = [list(j) for j in inputs]
 matrix = np.array(data)
 
-numRows = len(matrix)
-numColumns = len(matrix[0])
-edge = numRows*2 + ((numColumns-2) * 2)
-scenicScores = []
-numTrees = 0
+num_rows = len(matrix)
+num_cols = len(matrix[0])
+edge = num_rows*2 + ((num_cols-2) * 2)
+scenic_scores = []
+num_trees = 0
 
-for k in range(1, numRows-1):
-    for l in range(1, numColumns-1):
+for k in range(1, num_rows-1):
+    for l in range(1, num_cols-1):
         height = matrix[k, l]
         row = matrix[k, :]
         col = matrix[:, l]
@@ -26,18 +26,18 @@ for k in range(1, numRows-1):
         u = np.flip(u)
 
         if height > max(u):
-            numTrees += 1
+            num_trees += 1
 
         elif height > max(d):
-            numTrees += 1
+            num_trees += 1
 
         elif height > max(l):
-            numTrees += 1
+            num_trees += 1
 
         elif height > max(r):
-            numTrees += 1
+            num_trees += 1
 
-        numScore = 1
+        score = 1
         for m in [l, r, u, d]:
             counter = 0
             for n in m:
@@ -47,10 +47,11 @@ for k in range(1, numRows-1):
                     counter += 1
                     break
 
-            numScore *= counter
-        scenicScores.append(numScore)
+            score *= counter
+        scenic_scores.append(score)
 
-numTrees += edge
+num_trees += edge
 
-print(numTrees)  # part 1
-print(max(scenicScores))  # part 2
+
+print(num_trees) # part 1
+print(max(scenic_scores)) # part 2

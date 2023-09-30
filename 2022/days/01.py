@@ -1,15 +1,15 @@
 with open('../data/01.txt') as file:
-    inputs = [i for i in file.read().strip().split('\n\n')]
+    inputs = [_ for _ in file.read().strip().split('\n\n')]
 
-sumList = []
+calories = []
 
 for i in inputs:
-    allSum = 0
+    elf = 0
     for j in i.split('\n'):
-        allSum += int(j)
-    sumList.append(allSum)
+        elf += int(j)
+    calories.append(elf)
 
-sumList = sorted(sumList)
+calories = sorted(calories)
 
-print(max(sumList))  # part 1
-print(sumList[-3]+sumList[-2]+sumList[-1])  # part 2
+print(max(calories))  # part 1
+print(calories[-3]+calories[-2]+calories[-1])  # part 2

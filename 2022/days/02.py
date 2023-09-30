@@ -1,7 +1,6 @@
 with open('../data/02.txt') as file:
     inputs = [i for i in file.read().strip().split('\n')]
 
-
 def part1(data):
     score = 0
 
@@ -36,7 +35,6 @@ def part1(data):
 
     print(score)
 
-
 def part2(data):
     score = 0
 
@@ -65,5 +63,5 @@ def part2(data):
     print(score)
 
 
-part1(inputs)
-part2(inputs)
+part1(inputs) # part 1
+part2(inputs) # part 2

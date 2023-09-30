@@ -12,39 +12,37 @@ stacks = {1: ['Q', 'S', 'W', 'C', 'Z', 'V', 'F', 'T'],
            8: ['R', 'N', 'F', 'H', 'W'],
            9: ['J', 'Z', 'T', 'Q', 'P', 'R', 'B']}
 
-
 def part1(data):
     for moves in data[1]:
         move = moves.split(' ')
 
         for _ in range(int(move[1])):
-            rmStacks = stacks[int(move[3])].pop()
-            stacks[int(move[5])].append(rmStacks)
+            rm_stacks = stacks[int(move[3])].pop()
+            stacks[int(move[5])].append(rm_stacks)
 
-    stackEnds = ''
+    stack_ends = ''
     for k in stacks:
-        stackEnds += stacks[k][-1]
+        stack_ends += stacks[k][-1]
 
-    print(stackEnds)
-
+    print(stack_ends)
 
 def part2(data):
     for moves in data[1]:
         move = moves.split(' ')
 
-        rmStacks = stacks[int(move[3])][-int(move[1]):]
+        rm_stacks = stacks[int(move[3])][-int(move[1]):]
         stacks[int(move[3])] = stacks[int(move[3])][:-int(move[1])]
 
-        for j in rmStacks:
+        for j in rm_stacks:
             stacks[int(move[5])].append(j)
 
-    stackEnds = ''
+    stack_ends = ''
     for k in stacks:
-        stackEnds += stacks[k][-1]
+        stack_ends += stacks[k][-1]
 
-    print(stackEnds)
+    print(stack_ends)
+
 
 #--- run part 2 after running part 1 ---#
-
-#part1(inputs) # part 1
-part2(inputs) # part 2
+part1(inputs) # part 1
+#part2(inputs) # part 2
