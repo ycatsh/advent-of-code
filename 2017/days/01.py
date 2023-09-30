@@ -1,7 +1,6 @@
 with open('../data/01.txt') as file:
     input = file.read().strip()
 
-
 def part1():
     digits = []
     for i in range(len(input)):
@@ -9,7 +8,6 @@ def part1():
             digits.append(int(input[i]))    
     
     print(sum(digits))
-
 
 def part2():
     digits = []
@@ -19,6 +17,6 @@ def part2():
 
     print(sum(digits))
 
-part1()
-part2()
 
+part1() # part 1 
+part2() # part 2
