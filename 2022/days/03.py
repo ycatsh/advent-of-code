@@ -35,6 +35,5 @@ def part2(chars):
 
     print(items)
 
-
 part1(chars) # part 1
 part2(chars) # part 2
