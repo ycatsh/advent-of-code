@@ -1,7 +1,7 @@
 import numpy as np
 
 with open('../data/08.txt') as file:
-    inputs = [i for i in file.read().strip().split('\n')]
+    inputs = [_ for _ in file.read().strip().split('\n')]
 
 data = [list(j) for j in inputs]
 matrix = np.array(data)
@@ -51,7 +51,6 @@ for k in range(1, num_rows-1):
         scenic_scores.append(score)
 
 num_trees += edge
-
 
 print(num_trees) # part 1
 print(max(scenic_scores)) # part 2

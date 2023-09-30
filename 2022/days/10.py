@@ -24,5 +24,4 @@ def part1():
      
     print(sum(strength))
 
-
 part1() # part 1

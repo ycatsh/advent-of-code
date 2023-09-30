@@ -42,7 +42,6 @@ def part2(data):
 
     print(stack_ends)
 
-
 #--- run part 2 after running part 1 ---#
 part1(inputs) # part 1
 #part2(inputs) # part 2
