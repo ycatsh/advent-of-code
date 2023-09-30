@@ -67,7 +67,6 @@ def part2(data, screen):
 
     print(sum(sum(bright) for bright in screen))
 
-
 #--- call part 2 after running part 1 ---#
 part1(inputs, display) # part 1
 #part2(inputs, display) # part 2 

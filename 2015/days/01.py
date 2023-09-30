@@ -1,5 +1,5 @@
 with open('../data/01.txt') as file:
-    inputs = [i for i in file.read()]
+    inputs = [_ for _ in file.read()]
 
 def part1(data):
     floor = 0
@@ -10,7 +10,6 @@ def part1(data):
         if j == ')':
             floor -= 1
     print(floor)
-
 
 def part2(data):
     floor = 0

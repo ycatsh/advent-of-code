@@ -1,6 +1,5 @@
 with open('../data/02.txt') as file:
-    inputs = [i for i in file.read().strip().split('\n')]
-
+    inputs = [_ for _ in file.read().strip().split('\n')]
 
 def part1(data):
     total_area = 0 
@@ -14,7 +13,6 @@ def part1(data):
 
         total_area += area+slag
     print(total_area)
-
 
 def part2(data):
     total_feet = 0
