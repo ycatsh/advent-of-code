@@ -1,7 +1,7 @@
 import numpy
 
 with open('../data/08.txt') as file:
-    inputs = [i for i in file.read().strip().split('\n')]
+    inputs = [_ for _ in file.read().strip().split('\n')]
 
 display = numpy.zeros((50,6), dtype=numpy.int_)
 
