@@ -53,7 +53,6 @@ def part2():
         
     print(bytes(dense).hex())
 
-
 #--- run part 2 after running part 1 ---#
-#part1()
-part2()
+part1()
+#part2()

@@ -1,7 +1,6 @@
 with open('../data/04.txt') as file:
     input = file.read().strip().split('\n')
 
-
 def part1():
     valid = 0
     for line in input:
@@ -10,7 +9,6 @@ def part1():
             valid += 1
 
     print(valid)
-
 
 def part2():
     valid = 0 
@@ -30,6 +28,5 @@ def part2():
 
     print(valid)
 
-
-part1()
-part2()
+part1() # part 1 
+part2() # part 2
