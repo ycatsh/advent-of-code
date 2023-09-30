@@ -1,6 +1,5 @@
 with open('../data/03.txt') as file:
-    inputs = [i for i in file.read().strip().split('\n')]
-
+    inputs = [_ for _ in file.read().strip().split('\n')]
 
 def part1(data):
     valid = 0
@@ -8,12 +7,10 @@ def part1(data):
     for i in range(len(data)):
         j = data[i].split(' ')
         sides = sorted(list(map(int, [k for k in j if k.strip()])))
-
         if sides[0] + sides[1] > sides[2]:
             valid += 1 
     
     print(valid)
-
 
 def part2(data):
     sides = []
@@ -31,7 +28,6 @@ def part2(data):
         sides_f = sorted([sides_col[0], sides_col[1], sides_col[2]])
         if sides_f[0] + sides_f[1] > sides_f[2]:
             valid += 1
-
         sides_col = sides_col[3:] 
 
     print(valid)
