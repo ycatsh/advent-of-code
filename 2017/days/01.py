@@ -17,6 +17,5 @@ def part2():
 
     print(sum(digits))
 
-
 part1() # part 1 
 part2() # part 2

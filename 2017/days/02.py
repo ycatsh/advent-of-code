@@ -23,6 +23,5 @@ def part2():
                         divs += (i/j)
     print(divs)
 
-
 part1() # part 1
 part2() # part 2

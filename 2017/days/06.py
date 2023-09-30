@@ -22,4 +22,3 @@ while True:
 
 print(len(patterns)) # part 1
 print(len(patterns)-k) # part 2
-
