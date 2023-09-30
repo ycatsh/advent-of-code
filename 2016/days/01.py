@@ -18,7 +18,6 @@ def part1(data, d, rs, r):
 
     print(abs(path[0])+abs(path[1]))
 
-
 def part2(data, d, rs, r):
     visited = [[0,0],]
     path = [0,0]
@@ -36,7 +35,6 @@ def part2(data, d, rs, r):
                 return
             else:
                 visited.append([path[0], path[1]])
-
 
 part1(inputs, directions, rotations, rotation) # part 1
 part2(inputs, directions, rotations, rotation) # part 2
