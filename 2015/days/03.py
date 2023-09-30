@@ -1,5 +1,5 @@
 with open ('../data/03.txt') as file:
-    inputs = [i for i in file.read()]
+    inputs = [_ for _ in file.read()]
 
 move_dir = {'>':[1,0], '<':[-1,0], '^':[0,1], 'v':[0,-1]}
 

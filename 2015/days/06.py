@@ -1,7 +1,7 @@
 import numpy
 
 with open ('../data/06.txt') as file:
-    inputs = [i for i in file.read().strip().split('\n')]
+    inputs = [_ for _ in file.read().strip().split('\n')]
 
 display = numpy.zeros((1000,1000), dtype=numpy.int_)
 #0: off, 1: on
@@ -36,7 +36,6 @@ def part1(data, screen):
 
     print(sum(sum(lit) for lit in screen))
 
-
 def part2(data, screen):
     for line in range(len(data)):
         cmd = inputs[line].split(' ')
@@ -70,6 +69,5 @@ def part2(data, screen):
 
 
 #--- call part 2 after running part 1 ---#
-
-#part1(inputs, display) # part 1
-part2(inputs, display) # part 2 
+part1(inputs, display) # part 1
+#part2(inputs, display) # part 2 
