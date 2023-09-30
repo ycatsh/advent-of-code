@@ -10,7 +10,6 @@ def part1(i):
             break
         i += 1
 
-
 def part2(j):
     while j >= 0:
         hexed = hashlib.md5(f'{secret_key}{j}'.encode('utf-8')).hexdigest()
