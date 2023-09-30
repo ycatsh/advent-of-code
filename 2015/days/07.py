@@ -1,5 +1,5 @@
 with open ('../data/07.txt') as file:
-    inputs = [i for i in file.read().strip().split('\n')]
+    inputs = [_ for _ in file.read().strip().split('\n')]
 
 #AND: &, OR: |, NOT: ~, XOR: ^, RSHIFT: >>, LSHIFT: <<
 
