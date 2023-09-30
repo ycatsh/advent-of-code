@@ -1,41 +1,40 @@
 import string
 
 with open('../data/03.txt') as file:
-    inputs = [i for i in file.read().strip().split('\n')]
+    inputs = [_ for _ in file.read().strip().split('\n')]
 
-chars = [i for i in string.ascii_letters]
+chars = [_ for _ in string.ascii_letters]
 
-def part1(charsList):
-    sumItems = 0
+def part1(chars):
+    items = 0
 
     for j in inputs:
         half = int(len(j)/2)
 
-        firstComp = set(j[:half])
-        secondComp = set(j[half:])
+        first = set(j[:half])
+        second = set(j[half:])
 
-        for k in charsList:
-            if k in firstComp and k in secondComp:
-                sumItems += (charsList.index(k)+1)
+        for k in chars:
+            if k in first and k in second:
+                items += (chars.index(k)+1)
 
-    print(sumItems)
+    print(items)
 
-
-def part2(charList):
-    nextGroup = 3
+def part2(chars):
+    next = 3
     length = len(inputs)
-    sumItems = 0
+    items = 0
 
     for j in range(0, length, 3):
-        comp = inputs[j:nextGroup]
-        nextGroup += 3
+        comp = inputs[j:next]
+        next += 3
 
-        for k in charList:
+        for k in chars:
             if k in comp[0] and k in comp[1] and k in comp[2]:
-                sumItems += (charList.index(k)+1)
+                items += (chars.index(k)+1)
 
-    print(sumItems)
+    print(items)
 
 
-part1(chars)
-part2(chars)
+part1(chars) # part 1
+part2(chars) # part 2
